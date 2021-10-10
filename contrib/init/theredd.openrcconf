@@ -1,0 +1,26 @@
+# /etc/conf.d/unityd: config file for /etc/init.d/unityd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/unity/unity.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/unityd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/unityd.pid"
+
+# Where to write unityd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/unityd"
+
+# User and group to own unityd process
+#BITCOIND_USER="unity"
+#BITCOIND_GROUP="unity"
+
+# Path to unityd executable
+#BITCOIND_BIN="/usr/bin/unityd"
+
+# Nice value to run unityd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

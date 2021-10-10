@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=unity
+Comment=unity P2P Cryptocurrency
+Comment[fr]=unity, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=unity, eşten eşe kriptografik sanal para birimi
+Exec=unity-qt %u
+Terminal=false
+Type=Application
+Icon=unity128
+MimeType=x-scheme-handler/unity;
+Categories=Office;Finance;

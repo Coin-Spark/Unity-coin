@@ -1,0 +1,26 @@
+[Unit]
+Description=unity's distributed currency daemon
+After=network.target
+
+[Service]
+User=unity
+Group=unity
+
+Type=forking
+PIDFile=/var/lib/unityd/unityd.pid
+
+ExecStart=/usr/bin/unityd -daemon -pid=/var/lib/unityd/unityd.pid \
+          -conf=/etc/unity/unity.conf -datadir=/var/lib/unityd
+
+ExecStop=-/usr/bin/unity-cli -conf=/etc/unity/unity.conf \
+         -datadir=/var/lib/unityd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
